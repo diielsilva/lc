@@ -1,16 +1,17 @@
 package medium;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-}
-
 class LC701 {
+
+    static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+    }
+
     TreeNode insertIntoBST(TreeNode root, int value) {
         TreeNode aux = root;
         TreeNode prev = null;
