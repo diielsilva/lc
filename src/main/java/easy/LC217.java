@@ -1,18 +1,18 @@
 package easy;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 class LC217 {
     boolean containsDuplicate(int[] numbers) {
-        Map<Integer, Integer> cache = new HashMap<>();
+        Set<Integer> cache = new HashSet<>();
 
         for (int number : numbers) {
-            if (cache.containsKey(number)) {
+            if (cache.contains(number)) {
                 return true;
             }
 
-            cache.put(number, 1);
+            cache.add(number);
         }
 
         return false;
